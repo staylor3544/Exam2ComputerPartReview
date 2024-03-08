@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   In this module, we will be creating a way for you to be able to assign
 #   tasks to each of the seven dwarves for their day at work.
@@ -29,9 +29,25 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def response (name):
+    match name:
+        case "Happy":
+            return "Yipeeee!!!!"
+        case "Doc":
+            return "Heigh-Hoooooo!!!"
+        case "Grumpy":
+            return "ARG!!!"
+        case "Dopey":
+            return "Heigh-Hoooooo!!!"
+        case "Bashful":
+            return "Heigh-Hoooooo!!!"
+        case "Sleepy":
+            return "Heigh-Hoooooo!!!"
+        case "Sneezy":
+            return "AchOOOOOO!!!!!"
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   Now, we need a function to handle the assigning of tasks.
 #
@@ -52,6 +68,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def work_order (dwarf_name):
+    orders = input(f"Please give {dwarf_name} a task: ")
+    dwarf_tuple = (dwarf_name, orders)
+    return dwarf_tuple
+
+
 
 ###############################################################################
 # TODO: 3.
@@ -78,3 +100,8 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    dwarf_list = ["Happy", "Doc", "Grumpy", "Dopey", "Bashful", "Sleepy", "Sneezy"]
+    for x in dwarf_list:
+        print(work_order(x))
+        

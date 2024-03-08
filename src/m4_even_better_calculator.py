@@ -49,3 +49,6 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+t = (2,5,3)
+
+print(t[1:])
